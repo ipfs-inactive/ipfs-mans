@@ -1,0 +1,10 @@
+name: stats
+command: ipfs stats
+help:
+  tagline: Query ipfs statistics.
+  short: |
+    'ipfs stats' is a set of commands to help look at statistics
+    for your ipfs node.
+  long: |
+    'ipfs stats' is a set of commands to help look at statistics
+    for your ipfs node.

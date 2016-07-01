@@ -1,0 +1,15 @@
+name: add
+command: ipfs swarm filters add
+arguments:
+  - name: address
+    type: string
+    required: true
+    variadic: true
+    description: Multiaddr to filter.
+help:
+  tagline: Add an address filter.
+  short: |
+    'ipfs swarm filters add' will add an address filter to the daemons swarm.
+    Filters applied this way will not persist daemon reboots, to achieve that,
+    add your filters to the ipfs config file.
+  long: null

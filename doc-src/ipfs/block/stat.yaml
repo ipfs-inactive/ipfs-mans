@@ -1,0 +1,16 @@
+name: stat
+command: ipfs block stat
+arguments:
+  - name: key
+    type: string
+    required: true
+    description: The base58 multihash of an existing block to get.
+help:
+  tagline: Print information of a raw IPFS block.
+  short: |
+    'ipfs block stat' is a plumbing command for retrieving information
+    on raw ipfs blocks. It outputs the following to stdout:
+    
+    	Key  - the base58 encoded multihash
+    	Size - the size of the block in bytes
+  long: null

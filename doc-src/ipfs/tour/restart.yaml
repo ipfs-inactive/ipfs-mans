@@ -1,0 +1,6 @@
+name: restart
+command: ipfs tour restart
+help:
+  tagline: Restart the IPFS Tour.
+  short: null
+  long: null

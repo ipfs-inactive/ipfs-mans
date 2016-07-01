@@ -1,0 +1,25 @@
+name: ls
+command: ipfs ls
+options:
+  - name: resolve-type
+    type: bool
+    default: true
+    description: Resolve linked objects to find out their types.
+  - name: headers
+    alias: v
+    type: bool
+    description: Print table headers (Hash, Size, Name).
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    variadic: true
+    description: The path to the IPFS object(s) to list links from.
+help:
+  tagline: List links from an object.
+  short: |
+    Displays the links an IPFS or IPNS object(s) contains, with the following
+    format:
+    
+      <link base58 hash> <link size in bytes> <link name>
+  long: null

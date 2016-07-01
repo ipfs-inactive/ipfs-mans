@@ -1,0 +1,35 @@
+name: put
+command: ipfs dht put
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+arguments:
+  - name: value
+    type: string
+    required: true
+    description: The value to store.
+  - name: key
+    type: string
+    required: true
+    description: The key to store the value at.
+help:
+  tagline: Write a key/value pair to the DHT.
+  short: |
+    Given a key of the form /foo/bar and a value of any form, this will write that
+    value to the DHT with that key.
+    
+    Keys have two parts: a keytype (foo) and the key name (bar). IPNS uses the
+    /ipns keytype, and expects the key name to be a Peer ID. IPNS entries are
+    specifically formatted (protocol buffer).
+    
+    You may only use keytypes that are supported in your ipfs binary: currently
+    this is only /ipns. Unless you have a relatively deep understanding of the
+    go-ipfs DHT internals, you likely want to be using 'ipfs name publish' instead
+    of this.
+    
+    Value is arbitrary text. Standard input can be used to provide value.
+    
+    NOTE: A value may not exceed 2048 bytes.
+  long: null

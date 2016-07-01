@@ -1,0 +1,45 @@
+name: publish
+command: ipfs name publish
+options:
+  - name: ttl
+    type: string
+    description: Time duration this record should be cached for (caution: experimental).
+  - name: lifetime
+    alias: t
+    type: string
+    default: 24h
+    description: |
+      Time duration that the record will be valid for. <default>
+          This accepts durations such as "300s", "1.5h" or "2h45m". Valid time units are
+          "ns", "us" (or "µs"), "ms", "s", "m", "h".
+  - name: resolve
+    type: bool
+    default: true
+    description: Resolve given path before publishing.
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    description: IPFS path of the object to be published.
+help:
+  tagline: Publish an object to IPNS.
+  short: |
+    IPNS is a PKI namespace, where names are the hashes of public keys, and
+    the private key enables publishing new (signed) values. In publish, the
+    default value of <name> is your own identity public key.
+  long: |
+    IPNS is a PKI namespace, where names are the hashes of public keys, and
+    the private key enables publishing new (signed) values. In publish, the
+    default value of <name> is your own identity public key.
+    
+    Examples:
+    
+    Publish an <ipfs-path> to your identity name:
+    
+      > ipfs name publish /ipfs/QmatmE9msSfkKxoffpHwNLNKgwZG8eT9Bud6YoPab52vpy
+      Published to QmbCMUZw6JFeZ7Wp9jkzbye3Fzp2GGcPgC3nmeUjfVF87n: /ipfs/QmatmE9msSfkKxoffpHwNLNKgwZG8eT9Bud6YoPab52vpy
+    
+    Publish an <ipfs-path> to another public key (not implemented):
+    
+      > ipfs name publish /ipfs/QmatmE9msSfkKxoffpHwNLNKgwZG8eT9Bud6YoPab52vpy QmbCMUZw6JFeZ7Wp9jkzbye3Fzp2GGcPgC3nmeUjfVF87n
+      Published to QmbCMUZw6JFeZ7Wp9jkzbye3Fzp2GGcPgC3nmeUjfVF87n: /ipfs/QmatmE9msSfkKxoffpHwNLNKgwZG8eT9Bud6YoPab52vpy

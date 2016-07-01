@@ -1,0 +1,27 @@
+name: read
+command: ipfs files read
+options:
+  - name: count
+    alias: n
+    type: int
+    description: Maximum number of bytes to read.
+  - name: offset
+    alias: o
+    type: int
+    description: Byte offset to begin reading from.
+arguments:
+  - name: path
+    type: string
+    required: true
+    description: Path to file to be read.
+help:
+  tagline: Read a file in a given mfs.
+  short: |
+    Read a specified number of bytes from a file at a given offset. By default,
+    will read the entire file similar to unix cat.
+    
+    Examples:
+    
+        $ ipfs files read /test/hello
+        hello
+  long: null

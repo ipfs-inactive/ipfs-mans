@@ -1,0 +1,53 @@
+name: write
+command: ipfs files write
+options:
+  - name: count
+    alias: n
+    type: int
+    description: Maximum number of bytes to read.
+  - name: truncate
+    alias: t
+    type: bool
+    description: Truncate the file to size zero before writing.
+  - name: create
+    alias: e
+    type: bool
+    description: Create the file if it does not exist.
+  - name: offset
+    alias: o
+    type: int
+    description: Byte offset to begin writing at.
+arguments:
+  - name: data
+    type: file
+    required: true
+    stdin: true
+    description: Data to write.
+  - name: path
+    type: string
+    required: true
+    description: Path to write to.
+help:
+  tagline: Write to a mutable file in a given filesystem.
+  short: |
+    Write data to a file in a given filesystem. This command allows you to specify
+    a beginning offset to write to. The entire length of the input will be written.
+    
+    If the '--create' option is specified, the file will be created if it does not
+    exist. Nonexistant intermediate directories will not be created.
+    
+    If the '--flush' option is set to false, changes will not be propogated to the
+    merkledag root. This can make operations much faster when doing a large number
+    of writes to a deeper directory structure.
+    
+    EXAMPLE:
+    
+        echo "hello world" | ipfs files write --create /myfs/a/b/file
+        echo "hello world" | ipfs files write --truncate /myfs/a/b/file
+    
+    WARNING:
+    
+    Usage of the '--flush=false' option does not guarantee data durability until
+    the tree has been flushed. This can be accomplished by running 'ipfs files
+    stat' on the file or any of its ancestors.
+  long: null

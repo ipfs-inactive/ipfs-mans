@@ -1,0 +1,9 @@
+name: block
+command: ipfs block
+help:
+  tagline: Manipulate raw IPFS blocks.
+  short: |
+    'ipfs block' is a plumbing command used to manipulate raw ipfs blocks.
+    Reads from stdin or writes to stdout, and <key> is a base58 encoded
+    multihash.
+  long: null

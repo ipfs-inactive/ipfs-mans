@@ -1,0 +1,19 @@
+name: filters
+command: ipfs swarm filters
+help:
+  tagline: Manipulate address filters.
+  short: |
+    'ipfs swarm filters' will list out currently applied filters. Its subcommands
+    can be used to add or remove said filters. Filters are specified using the
+    multiaddr-filter format:
+    
+    Example:
+    
+        /ip4/192.168.0.0/ipcidr/16
+    
+    Where the above is equivalent to the standard CIDR:
+    
+        192.168.0.0/16
+    
+    Filters default to those specified under the "Swarm.AddrFilters" config key.
+  long: null

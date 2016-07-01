@@ -1,0 +1,17 @@
+name: connect
+command: ipfs swarm connect
+arguments:
+  - name: address
+    type: string
+    required: true
+    variadic: true
+    description: Address of peer to connect to.
+help:
+  tagline: Open connection to a given address.
+  short: |
+    'ipfs swarm connect' opens a new direct connection to a peer address.
+    
+    The address format is an ipfs multiaddr:
+    
+    ipfs swarm connect /ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
+  long: null

@@ -1,0 +1,11 @@
+name: commands
+command: ipfs commands
+options:
+  - name: flags
+    alias: f
+    type: bool
+    description: Show command flags
+help:
+  tagline: List all available commands.
+  short: Lists all available commands (and subcommands) and exits.
+  long: null

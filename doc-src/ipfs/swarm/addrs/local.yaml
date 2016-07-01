@@ -1,0 +1,10 @@
+name: local
+command: ipfs swarm addrs local
+options:
+  - name: id
+    type: bool
+    description: Show peer ID in addresses.
+help:
+  tagline: List local addresses.
+  short: \'ipfs swarm addrs local' lists all local addresses the node is listening on.
+  long: null

@@ -1,0 +1,38 @@
+name: get
+command: ipfs get
+options:
+  - name: compression-level
+    alias: l
+    type: int
+    default: -1
+    description: The level of compression (1-9).
+  - name: compress
+    alias: C
+    type: bool
+    description: Compress the output with GZIP compression.
+  - name: archive
+    alias: a
+    type: bool
+    description: Output a TAR archive.
+  - name: output
+    alias: o
+    type: string
+    description: The path where the output should be stored.
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    description: The path to the IPFS object(s) to be outputted.
+help:
+  tagline: Download IPFS objects.
+  short: |
+    Stores to disk the data contained an IPFS or IPNS object(s) at the given path.
+    
+    By default, the output will be stored at './<ipfs-path>', but an alternate
+    path can be specified with '--output=<path>' or '-o=<path>'.
+    
+    To output a TAR archive instead of unpacked files, use '--archive' or '-a'.
+    
+    To compress the output with GZIP compression, use '--compress' or '-C'. You
+    may also specify the level of compression by specifying '-l=<1-9>'.
+  long: null

@@ -1,0 +1,18 @@
+name: add
+command: ipfs pin add
+options:
+  - name: recursive
+    alias: r
+    type: bool
+    default: true
+    description: Recursively pin the object linked to by the specified object(s).
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    variadic: true
+    description: Path to object(s) to be pinned.
+help:
+  tagline: Pins objects to local storage.
+  short: Stores an IPFS object(s) from a given path locally to disk.
+  long: null

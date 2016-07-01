@@ -1,0 +1,14 @@
+name: bootstrap
+command: ipfs bootstrap
+help:
+  tagline: Show or edit the list of bootstrap peers.
+  short: |
+    Running 'ipfs bootstrap' with no arguments will run 'ipfs bootstrap list'.
+    
+    SECURITY WARNING:
+    
+    The bootstrap command manipulates the "bootstrap list", which contains
+    the addresses of bootstrap nodes. These are the *trusted peers* from
+    which to learn about other peers in the network. Only edit this list
+    if you understand the risks of adding or removing nodes from this list.
+  long: null

@@ -1,0 +1,6 @@
+name: sys
+command: ipfs diag sys
+help:
+  tagline: Prints out system diagnostic information.
+  short: Prints out information about your computer to aid in easier debugging.
+  long: null

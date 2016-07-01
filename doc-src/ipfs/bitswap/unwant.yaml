@@ -1,0 +1,12 @@
+name: unwant
+command: ipfs bitswap unwant
+arguments:
+  - name: key
+    type: string
+    required: true
+    variadic: true
+    description: Key(s) to remove from your wantlist.
+help:
+  tagline: Remove a given block from your wantlist.
+  short: null
+  long: null

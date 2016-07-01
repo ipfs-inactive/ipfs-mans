@@ -1,0 +1,17 @@
+name: query
+command: ipfs dht query
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+arguments:
+  - name: peerID
+    type: string
+    required: true
+    variadic: true
+    description: The peerID to run the query against.
+help:
+  tagline: Find the closest Peer IDs to a given Peer ID by querying the DHT.
+  short: Outputs a list of newline-delimited Peer IDs.
+  long: null

@@ -1,0 +1,19 @@
+name: disconnect
+command: ipfs swarm disconnect
+arguments:
+  - name: address
+    type: string
+    required: true
+    variadic: true
+    description: Address of peer to disconnect from.
+help:
+  tagline: Close connection to a given address.
+  short: |
+    'ipfs swarm disconnect' closes a connection to a peer address. The address
+    format is an ipfs multiaddr:
+    
+    ipfs swarm disconnect /ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
+    
+    The disconnect is not permanent; if ipfs needs to talk to that address later,
+    it will reconnect.
+  long: null

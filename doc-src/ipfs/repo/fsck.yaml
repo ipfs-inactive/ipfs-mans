@@ -1,0 +1,9 @@
+name: fsck
+command: ipfs repo fsck
+help:
+  tagline: Removes repo lockfiles.
+  short: |
+    'ipfs repo fsck' is a plumbing command that will remove repo and level db
+    lockfiles, as well as the api file. This command can only run when no ipfs
+    daemons are running.
+  long: null

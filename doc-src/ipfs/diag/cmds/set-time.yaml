@@ -1,0 +1,11 @@
+name: set-time
+command: ipfs diag cmds set-time
+arguments:
+  - name: time
+    type: string
+    required: true
+    description: Time to keep inactive requests in log.
+help:
+  tagline: Set how long to keep inactive requests in the log.
+  short: null
+  long: null

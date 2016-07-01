@@ -1,0 +1,6 @@
+name: local
+command: ipfs refs local
+help:
+  tagline: Lists all local references.
+  short: Displays the hashes of all local objects.
+  long: null

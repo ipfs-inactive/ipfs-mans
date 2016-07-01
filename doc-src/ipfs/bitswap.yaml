@@ -1,0 +1,6 @@
+name: bitswap
+command: ipfs bitswap
+help:
+  tagline: A set of commands to manipulate the bitswap agent.
+  short: null
+  long: null

@@ -1,0 +1,20 @@
+name: rm
+command: ipfs pin rm
+options:
+  - name: recursive
+    alias: r
+    type: bool
+    default: true
+    description: Recursively unpin the object linked to by the specified object(s).
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    variadic: true
+    description: Path to object(s) to be unpinned.
+help:
+  tagline: Removes the pinned object from local storage.
+  short: |
+    Removes the pin from the given object allowing it to be garbage
+    collected if needed. (By default, recursively. Use -r=false for direct pins)
+  long: null

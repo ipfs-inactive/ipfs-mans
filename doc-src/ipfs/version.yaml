@@ -1,0 +1,20 @@
+name: version
+command: ipfs version
+options:
+  - name: all
+    type: bool
+    description: Show all version information
+  - name: repo
+    type: bool
+    description: Show repo version.
+  - name: commit
+    type: bool
+    description: Show the commit hash.
+  - name: number
+    alias: n
+    type: bool
+    description: Only show the version number.
+help:
+  tagline: Shows ipfs version information.
+  short: Returns the current version of ipfs and exits.
+  long: null

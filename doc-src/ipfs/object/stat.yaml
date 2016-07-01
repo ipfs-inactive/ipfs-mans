@@ -1,0 +1,19 @@
+name: stat
+command: ipfs object stat
+arguments:
+  - name: key
+    type: string
+    required: true
+    description: Key of the object to retrieve, in base58-encoded multihash format.
+help:
+  tagline: Get stats for the DAG node named by <key>.
+  short: |
+    'ipfs object stat' is a plumbing command to print DAG node statistics.
+    <key> is a base58 encoded multihash. It outputs to stdout:
+    
+    	NumLinks        int number of links in link table
+    	BlockSize       int size of the raw, encoded data
+    	LinksSize       int size of the links segment
+    	DataSize        int size of the data segment
+    	CumulativeSize  int cumulative size of object and its references
+  long: null

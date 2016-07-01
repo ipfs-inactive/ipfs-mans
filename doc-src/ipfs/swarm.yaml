@@ -1,0 +1,9 @@
+name: swarm
+command: ipfs swarm
+help:
+  tagline: Swarm inspection tool.
+  short: |
+    'ipfs swarm' is a tool to manipulate the network swarm. The swarm is the
+    component that opens, listens for, and maintains connections to other
+    ipfs peers in the internet.
+  long: null

@@ -1,0 +1,13 @@
+name: replace
+command: ipfs config replace
+arguments:
+  - name: file
+    type: file
+    required: true
+    description: The file to use as the new config.
+help:
+  tagline: Replaces the config with <file>.
+  short: |
+    Make sure to back up the config file first if neccessary, as this operation
+    can't be undone.
+  long: null

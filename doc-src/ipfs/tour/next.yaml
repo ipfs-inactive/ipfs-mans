@@ -1,0 +1,6 @@
+name: next
+command: ipfs tour next
+help:
+  tagline: Show the next IPFS Tour topic.
+  short: null
+  long: null

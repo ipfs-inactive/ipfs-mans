@@ -1,0 +1,12 @@
+name: file
+command: ipfs file
+help:
+  tagline: Interact with ipfs objects representing Unix filesystems.
+  short: |
+    'ipfs file' provides a familiar interface to file systems represented
+    by IPFS objects, which hides IPFS implementation details like layout
+    objects (e.g. fanout and chunking).
+  long: |
+    'ipfs file' provides a familiar interface to file systems represented
+    by IPFS objects, which hides IPFS implementation details like layout
+    objects (e.g. fanout and chunking).

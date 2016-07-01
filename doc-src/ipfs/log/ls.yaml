@@ -1,0 +1,8 @@
+name: ls
+command: ipfs log ls
+help:
+  tagline: List the logging subsystems.
+  short: |
+    'ipfs log ls' is a utility command used to list the logging
+    subsystems of a running daemon.
+  long: null

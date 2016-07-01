@@ -1,0 +1,40 @@
+name: diff
+command: ipfs object diff
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+arguments:
+  - name: obj_b
+    type: string
+    required: true
+    description: Object to diff.
+  - name: obj_a
+    type: string
+    required: true
+    description: Object to diff against.
+help:
+  tagline: Takes a diff of the two given objects.
+  short: |
+    'ipfs object diff' is a command used to show the differences between
+    two ipfs objects.
+  long: |
+    'ipfs object diff' is a command used to show the differences between
+    two ipfs objects.
+    
+    Example:
+    
+       > ls foo
+       bar baz/ giraffe
+       > ipfs add -r foo
+       ...
+       Added QmegHcnrPgMwC7tBiMxChD54fgQMBUecNw9nE9UUU4x1bz foo
+       > OBJ_A=QmegHcnrPgMwC7tBiMxChD54fgQMBUecNw9nE9UUU4x1bz
+       > echo "different content" > foo/bar
+       > ipfs add -r foo
+       ...
+       Added QmcmRptkSPWhptCttgHg27QNDmnV33wAJyUkCnAvqD3eCD foo
+       > OBJ_B=QmcmRptkSPWhptCttgHg27QNDmnV33wAJyUkCnAvqD3eCD
+       > ipfs object diff -v $OBJ_A $OBJ_B
+       Changed "bar" from QmNgd5cz2jNftnAHBhcRUGdtiaMzb5Rhjqd4etondHHST8 to QmRfFVsjSXkhFxrfWnLpMae2M4GBVsry6VAuYYcji5MiZb.

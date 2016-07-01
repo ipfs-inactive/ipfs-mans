@@ -1,0 +1,28 @@
+name: ipfs
+command: ipfs
+options:
+  - name: api
+    type: string
+    description: Use a specific API instance (defaults to /ip4/127.0.0.1/tcp/5001)
+  - name: local
+    alias: L
+    type: bool
+    description: Run the command locally, instead of using the daemon.
+  - name: h
+    type: bool
+    description: Show a short version of the command help text.
+  - name: help
+    type: bool
+    description: Show the full command help text.
+  - name: debug
+    alias: D
+    type: bool
+    description: Operate in debug mode.
+  - name: config
+    alias: c
+    type: string
+    description: Path to the configuration file to use.
+help:
+  tagline: Global p2p merkle-dag filesystem.
+  short: null
+  long: null

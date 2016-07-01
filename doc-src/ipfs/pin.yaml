@@ -1,0 +1,6 @@
+name: pin
+command: ipfs pin
+help:
+  tagline: Pin (and unpin) objects to local storage.
+  short: null
+  long: null

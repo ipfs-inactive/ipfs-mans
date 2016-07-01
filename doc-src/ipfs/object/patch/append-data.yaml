@@ -1,0 +1,25 @@
+name: append-data
+command: ipfs object patch append-data
+arguments:
+  - name: data
+    type: file
+    required: true
+    stdin: true
+    description: Data to append.
+  - name: root
+    type: string
+    required: true
+    description: The hash of the node to modify.
+help:
+  tagline: Append data to the data segment of a dag node.
+  short: |
+    Append data to what already exists in the data segment in the given object.
+    
+    Example:
+    
+    	$ echo "hello" | ipfs object patch $HASH append-data
+    
+    NOTE: This does not append data to a file - it modifies the actual raw
+    data within an object. Objects have a max size of 1MB and objects larger than
+    the limit will not be respected by the network.
+  long: null

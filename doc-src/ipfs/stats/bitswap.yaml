@@ -1,0 +1,6 @@
+name: bitswap
+command: ipfs stats bitswap
+help:
+  tagline: Show some diagnostic information on the bitswap agent.
+  short: null
+  long: null

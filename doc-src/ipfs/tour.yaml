@@ -1,0 +1,16 @@
+name: tour
+command: ipfs tour
+arguments:
+  - name: id
+    type: string
+    required: false
+    description: The id of the topic you would like to tour.
+help:
+  tagline: An introduction to IPFS.
+  short: |
+    This is a tour that takes you through various IPFS concepts,
+    features, and tools to make sure you get up to speed with
+    IPFS very quickly. To start, run:
+    
+        ipfs tour
+  long: null

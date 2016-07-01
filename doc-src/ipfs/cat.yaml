@@ -1,0 +1,12 @@
+name: cat
+command: ipfs cat
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    variadic: true
+    description: The path to the IPFS object(s) to be outputted.
+help:
+  tagline: Show IPFS object data.
+  short: Displays the data contained by an IPFS or IPNS object(s) at the given path.
+  long: null

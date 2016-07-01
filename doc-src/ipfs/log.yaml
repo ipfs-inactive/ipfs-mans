@@ -1,0 +1,8 @@
+name: log
+command: ipfs log
+help:
+  tagline: Interact with the daemon log output.
+  short: |
+    'ipfs log' contains utility commands to affect or read the logging
+    output of a running daemon.
+  long: null

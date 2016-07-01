@@ -1,0 +1,14 @@
+name: gc
+command: ipfs repo gc
+options:
+  - name: quiet
+    alias: q
+    type: bool
+    description: Write minimal output.
+help:
+  tagline: Perform a garbage collection sweep on the repo.
+  short: |
+    'ipfs repo gc' is a plumbing command that will sweep the local
+    set of stored objects and remove ones that are not pinned in
+    order to reclaim hard disk space.
+  long: null

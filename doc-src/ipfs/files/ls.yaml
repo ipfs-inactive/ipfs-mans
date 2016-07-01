@@ -1,0 +1,30 @@
+name: ls
+command: ipfs files ls
+options:
+  - name: l
+    type: bool
+    description: Use long listing format.
+arguments:
+  - name: path
+    type: string
+    required: false
+    description: Path to show listing for. Defaults to '/'.
+help:
+  tagline: List directories.
+  short: |
+    List directories.
+    
+    Examples:
+    
+        $ ipfs files ls /welcome/docs/
+        about
+        contact
+        help
+        quick-start
+        readme
+        security-notes
+    
+        $ ipfs files ls /myfiles/a/b/c/d
+        foo
+        bar
+  long: null

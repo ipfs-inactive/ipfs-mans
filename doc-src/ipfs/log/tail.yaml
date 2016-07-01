@@ -1,0 +1,6 @@
+name: tail
+command: ipfs log tail
+help:
+  tagline: Read the logs.
+  short: \'ipfs log tail' is a utility command used to read log output as it is written.
+  long: null

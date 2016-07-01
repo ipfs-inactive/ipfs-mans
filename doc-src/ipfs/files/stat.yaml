@@ -1,0 +1,27 @@
+name: stat
+command: ipfs files stat
+options:
+  - name: size
+    type: bool
+    description: Print only size. Implies '--format=<cumulsize>'. Conflicts with other format options.
+  - name: hash
+    type: bool
+    description: Print only hash. Implies '--format=<hash>'. Conflicts with other format options.
+  - name: format
+    type: string
+    default: |
+      <hash>
+      Size: <size>
+      CumulativeSize: <cumulsize>
+      ChildBlocks: <childs>
+      Type: <type>
+    description: Print statistics in given format. Allowed tokens: <hash> <size> <cumulsize> <type> <childs>. Conflicts with other format options.
+arguments:
+  - name: path
+    type: string
+    required: true
+    description: Path to node to stat.
+help:
+  tagline: Display file status.
+  short: null
+  long: null

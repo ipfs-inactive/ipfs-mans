@@ -1,0 +1,15 @@
+name: cp
+command: ipfs files cp
+arguments:
+  - name: dest
+    type: string
+    required: true
+    description: Destination to copy object to.
+  - name: source
+    type: string
+    required: true
+    description: Source object to copy.
+help:
+  tagline: Copy files into mfs.
+  short: null
+  long: null

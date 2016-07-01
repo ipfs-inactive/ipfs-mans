@@ -1,0 +1,14 @@
+name: add
+command: ipfs tar add
+arguments:
+  - name: file
+    type: file
+    required: true
+    stdin: true
+    description: Tar file to add.
+help:
+  tagline: Import a tar file into ipfs.
+  short: |
+    'ipfs tar add' will parse a tar file and create a merkledag structure to
+    represent it.
+  long: null

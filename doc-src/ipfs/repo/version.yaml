@@ -1,0 +1,11 @@
+name: version
+command: ipfs repo version
+options:
+  - name: quiet
+    alias: q
+    type: bool
+    description: Write minimal output.
+help:
+  tagline: Show the repo version.
+  short: \'ipfs repo version' returns the current repo version.
+  long: null

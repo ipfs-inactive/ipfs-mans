@@ -1,0 +1,15 @@
+name: rm
+command: ipfs swarm filters rm
+arguments:
+  - name: address
+    type: string
+    required: true
+    variadic: true
+    description: Multiaddr filter to remove.
+help:
+  tagline: Remove an address filter.
+  short: |
+    'ipfs swarm filters rm' will remove an address filter from the daemons swarm.
+    Filters removed this way will not persist daemon reboots, to achieve that,
+    remove your filters from the ipfs config file.
+  long: null

@@ -1,0 +1,11 @@
+name: cmds
+command: ipfs diag cmds
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+help:
+  tagline: List commands run on this ipfs node.
+  short: Lists running and recently run commands.
+  long: null

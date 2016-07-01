@@ -1,0 +1,19 @@
+name: level
+command: ipfs log level
+arguments:
+  - name: level
+    type: string
+    required: true
+    description: |
+      The log level, with 'debug' the most verbose and 'critical' the least verbose.
+      			One of: debug, info, notice, warning, error, critical.
+  - name: subsystem
+    type: string
+    required: true
+    description: The subsystem logging identifier. Use 'all' for all subsystems.
+help:
+  tagline: Change the logging level.
+  short: |
+    'ipfs log level' is a utility command used to change the logging
+    output of a running daemon.
+  long: null

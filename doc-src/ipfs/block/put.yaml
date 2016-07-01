@@ -1,0 +1,14 @@
+name: put
+command: ipfs block put
+arguments:
+  - name: data
+    type: file
+    required: true
+    stdin: true
+    description: The data to be stored as an IPFS block.
+help:
+  tagline: Stores input as an IPFS block.
+  short: |
+    'ipfs block put' is a plumbing command for storing raw ipfs blocks.
+    It reads from stdin, and <key> is a base58 encoded multihash.
+  long: null

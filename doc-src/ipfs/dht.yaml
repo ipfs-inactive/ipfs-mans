@@ -1,0 +1,6 @@
+name: dht
+command: ipfs dht
+help:
+  tagline: Issue commands directly through the DHT.
+  short: null
+  long: null

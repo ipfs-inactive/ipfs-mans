@@ -1,0 +1,17 @@
+name: findpeer
+command: ipfs dht findpeer
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+arguments:
+  - name: peerID
+    type: string
+    required: true
+    variadic: true
+    description: The ID of the peer to search for.
+help:
+  tagline: Query the DHT for all of the multiaddresses associated with a Peer ID.
+  short: Outputs a list of newline-delimited multiaddresses.
+  long: null

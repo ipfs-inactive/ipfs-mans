@@ -1,0 +1,6 @@
+name: tar
+command: ipfs tar
+help:
+  tagline: Utility functions for tar files in IPFS.
+  short: null
+  long: null

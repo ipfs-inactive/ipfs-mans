@@ -1,0 +1,11 @@
+name: wantlist
+command: ipfs bitswap wantlist
+options:
+  - name: peer
+    alias: p
+    type: string
+    description: Specify which peer to show wantlist for. Default: self.
+help:
+  tagline: Show blocks currently on the wantlist.
+  short: Print out all blocks currently on the bitswap wantlist for the local peer.
+  long: null

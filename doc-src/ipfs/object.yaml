@@ -1,0 +1,8 @@
+name: object
+command: ipfs object
+help:
+  tagline: Interact with ipfs objects.
+  short: |
+    'ipfs object' is a plumbing command used to manipulate DAG objects
+    directly.
+  long: null

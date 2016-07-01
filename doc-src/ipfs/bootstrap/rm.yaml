@@ -1,0 +1,24 @@
+name: rm
+command: ipfs bootstrap rm
+options:
+  - name: all
+    type: bool
+    description: Remove all bootstrap peers.
+arguments:
+  - name: peer
+    type: string
+    required: false
+    variadic: true
+    description: A peer to add to the bootstrap list (in the format '<multiaddr>/<peerID>')
+help:
+  tagline: Removes peers from the bootstrap list.
+  short: |
+    Outputs the list of peers that were removed.
+    
+    SECURITY WARNING:
+    
+    The bootstrap command manipulates the "bootstrap list", which contains
+    the addresses of bootstrap nodes. These are the *trusted peers* from
+    which to learn about other peers in the network. Only edit this list
+    if you understand the risks of adding or removing nodes from this list.
+  long: null

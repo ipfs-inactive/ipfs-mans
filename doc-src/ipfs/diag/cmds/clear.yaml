@@ -1,0 +1,6 @@
+name: clear
+command: ipfs diag cmds clear
+help:
+  tagline: Clear inactive requests from the log.
+  short: null
+  long: null

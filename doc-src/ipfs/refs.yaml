@@ -1,0 +1,35 @@
+name: refs
+command: ipfs refs
+options:
+  - name: recursive
+    alias: r
+    type: bool
+    description: Recursively list links of child nodes.
+  - name: unique
+    alias: u
+    type: bool
+    description: Omit duplicate refs from output.
+  - name: edges
+    alias: e
+    type: bool
+    description: Emit edge format: `<from> -> <to>`.
+  - name: format
+    type: string
+    default: <dst>
+    description: Emit edges with given format. Available tokens: <src> <dst> <linkname>.
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    variadic: true
+    description: Path to the object(s) to list refs from.
+help:
+  tagline: Lists links (references) from an object.
+  short: |
+    Lists the hashes of all the links an IPFS or IPNS object(s) contains,
+    with the following format:
+    
+      <link base58 hash>
+    
+    NOTE: List all references recursively by using the flag '-r'.
+  long: null

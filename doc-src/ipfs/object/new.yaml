@@ -1,0 +1,18 @@
+name: new
+command: ipfs object new
+arguments:
+  - name: template
+    type: string
+    required: false
+    description: Template to use. Optional.
+help:
+  tagline: Creates a new object from an ipfs template.
+  short: \'ipfs object new' is a plumbing command for creating new DAG nodes.
+  long: |
+    'ipfs object new' is a plumbing command for creating new DAG nodes.
+    By default it creates and returns a new empty merkledag node, but
+    you may pass an optional template argument to create a preformatted
+    node.
+    
+    Available templates:
+    	* unixfs-dir

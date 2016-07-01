@@ -1,0 +1,12 @@
+name: update
+command: ipfs update
+arguments:
+  - name: args
+    type: string
+    required: false
+    variadic: true
+    description: Arguments for subcommand.
+help:
+  tagline: null
+  short: null
+  long: null

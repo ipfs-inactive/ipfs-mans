@@ -1,0 +1,29 @@
+name: id
+command: ipfs id
+options:
+  - name: format
+    alias: f
+    type: string
+    description: Optional output format.
+arguments:
+  - name: peerid
+    type: string
+    required: false
+    description: Peer.ID of node to look up.
+help:
+  tagline: Show IPFS Node ID info.
+  short: |
+    Prints out information about the specified peer.
+    If no peer is specified, prints out information for local peers.
+    
+    'ipfs id' supports the format option for output with the following keys:
+    <id> : The peers id.
+    <aver>: Agent version.
+    <pver>: Protocol version.
+    <pubkey>: Public key.
+    <addrs>: Addresses (newline delimited).
+    
+    EXAMPLE:
+    
+        ipfs id Qmece2RkXhsKe5CRooNisBTh4SK119KrXXGmoK6V3kb8aH -f="<addrs>\n"
+  long: null

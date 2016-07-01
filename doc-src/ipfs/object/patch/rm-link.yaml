@@ -1,0 +1,15 @@
+name: rm-link
+command: ipfs object patch rm-link
+arguments:
+  - name: link
+    type: string
+    required: true
+    description: Name of the link to remove.
+  - name: root
+    type: string
+    required: true
+    description: The hash of the node to modify.
+help:
+  tagline: Remove a link from an object.
+  short: Removes a link by the given name from root.
+  long: null

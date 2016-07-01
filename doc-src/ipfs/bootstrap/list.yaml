@@ -1,0 +1,6 @@
+name: list
+command: ipfs bootstrap list
+help:
+  tagline: Show peers in the bootstrap list.
+  short: Peers are output in the format '<multiaddr>/<peerID>'.
+  long: null

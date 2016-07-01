@@ -1,0 +1,11 @@
+name: cat
+command: ipfs tar cat
+arguments:
+  - name: path
+    type: string
+    required: true
+    description: IPFS path of archive to export.
+help:
+  tagline: Export a tar file from IPFS.
+  short: \'ipfs tar cat' will export a tar file from a previously imported one in IPFS.
+  long: null

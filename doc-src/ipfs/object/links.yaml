@@ -1,0 +1,19 @@
+name: links
+command: ipfs object links
+options:
+  - name: headers
+    alias: v
+    type: bool
+    description: Print table headers (Hash, Size, Name).
+arguments:
+  - name: key
+    type: string
+    required: true
+    description: Key of the object to retrieve, in base58-encoded multihash format.
+help:
+  tagline: Outputs the links pointed to by the specified object.
+  short: |
+    'ipfs object links' is a plumbing command for retrieving the links from
+    a DAG node. It outputs to stdout, and <key> is a base58 encoded
+    multihash.
+  long: null

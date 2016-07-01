@@ -1,0 +1,25 @@
+name: rm
+command: ipfs files rm
+options:
+  - name: recursive
+    alias: r
+    type: bool
+    description: Recursively remove directories.
+arguments:
+  - name: path
+    type: string
+    required: true
+    variadic: true
+    description: File to remove.
+help:
+  tagline: Remove a file.
+  short: |
+    Remove files or directories.
+    
+        $ ipfs files rm /foo
+        $ ipfs files ls /bar
+        cat
+        dog
+        fish
+        $ ipfs files rm -r /bar
+  long: null

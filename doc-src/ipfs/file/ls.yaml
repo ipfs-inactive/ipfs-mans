@@ -1,0 +1,32 @@
+name: ls
+command: ipfs file ls
+arguments:
+  - name: ipfs-path
+    type: string
+    required: true
+    variadic: true
+    description: The path to the IPFS object(s) to list links from.
+help:
+  tagline: List directory contents for Unix filesystem objects.
+  short: |
+    Displays the contents of an IPFS or IPNS object(s) at the given path.
+    
+    The JSON output contains size information. For files, the child size
+    is the total size of the file contents. For directories, the child
+    size is the IPFS link size.
+  long: |
+    Displays the contents of an IPFS or IPNS object(s) at the given path.
+    
+    The JSON output contains size information. For files, the child size
+    is the total size of the file contents. For directories, the child
+    size is the IPFS link size.
+    
+    The path can be a prefixless ref; in this case, we assume it to be an
+    /ipfs ref and not /ipns.
+    
+    Example:
+    
+        > ipfs file ls QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ
+        cat.jpg
+        > ipfs file ls /ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ
+        cat.jpg

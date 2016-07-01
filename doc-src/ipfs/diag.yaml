@@ -1,0 +1,6 @@
+name: diag
+command: ipfs diag
+help:
+  tagline: Generates diagnostic reports.
+  short: null
+  long: null

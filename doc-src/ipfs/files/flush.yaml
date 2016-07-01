@@ -1,0 +1,13 @@
+name: flush
+command: ipfs files flush
+arguments:
+  - name: path
+    type: string
+    required: false
+    description: Path to flush. Default: '/'.
+help:
+  tagline: Flush a given path's data to disk.
+  short: |
+    Flush a given path to disk. This is only useful when other commands
+    are run with the '--flush=false'.
+  long: null

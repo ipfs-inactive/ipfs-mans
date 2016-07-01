@@ -1,0 +1,75 @@
+name: add
+command: ipfs add
+options:
+  - name: pin
+    type: bool
+    default: true
+    description: Pin this object when adding.
+  - name: chunker
+    alias: s
+    type: string
+    description: Chunking algorithm to use.
+  - name: hidden
+    alias: H
+    type: bool
+    description: Include files that are hidden. Only takes effect on recursive add.
+  - name: wrap-with-directory
+    alias: w
+    type: bool
+    description: Wrap files with a directory object.
+  - name: only-hash
+    alias: n
+    type: bool
+    description: Only chunk and hash - do not write to disk.
+  - name: trickle
+    alias: t
+    type: bool
+    description: Use trickle-dag format for dag generation.
+  - name: progress
+    alias: p
+    type: bool
+    default: true
+    description: Stream progress data.
+  - name: silent
+    type: bool
+    description: Write no output.
+  - name: quiet
+    alias: q
+    type: bool
+    description: Write minimal output.
+  - name: recursive
+    alias: r
+    type: bool
+    description: Add directory paths recursively
+arguments:
+  - name: path
+    type: file-recursive
+    required: true
+    variadic: true
+    stdin: true
+    description: The path to a file to be added to IPFS.
+help:
+  tagline: Add a file to ipfs.
+  short: |
+    Adds contents of <path> to ipfs. Use -r to add directories.
+    Note that directories are added recursively, to form the ipfs
+    MerkleDAG.
+  long: |
+    Adds contents of <path> to ipfs. Use -r to add directories.
+    Note that directories are added recursively, to form the ipfs
+    MerkleDAG.
+    
+    The wrap option, '-w', wraps the file (or files, if using the
+    recursive option) in a directory. This directory contains only
+    the files which have been added, and means that the file retains
+    its filename. For example:
+    
+      > ipfs add example.jpg
+      added QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH example.jpg
+      > ipfs add example.jpg -w
+      added QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH example.jpg
+      added QmaG4FuMqEBnQNn3C8XJ5bpW8kLs7zq2ZXgHptJHbKDDVx
+    
+    You can now refer to the added file in a gateway, like so:
+    
+      /ipfs/QmaG4FuMqEBnQNn3C8XJ5bpW8kLs7zq2ZXgHptJHbKDDVx/example.jpg

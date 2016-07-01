@@ -1,0 +1,6 @@
+name: list
+command: ipfs tour list
+help:
+  tagline: Show a list of IPFS Tour topics.
+  short: null
+  long: null

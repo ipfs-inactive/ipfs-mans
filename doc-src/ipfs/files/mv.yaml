@@ -1,0 +1,20 @@
+name: mv
+command: ipfs files mv
+arguments:
+  - name: dest
+    type: string
+    required: true
+    description: Destination path for file to be moved to.
+  - name: source
+    type: string
+    required: true
+    description: Source file to move.
+help:
+  tagline: Move files.
+  short: |
+    Move files around. Just like traditional unix mv.
+    
+    Example:
+    
+        $ ipfs files mv /myfs/a/b/c /myfs/foo/newc
+  long: null

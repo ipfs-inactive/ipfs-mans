@@ -1,0 +1,6 @@
+name: addrs
+command: ipfs swarm addrs
+help:
+  tagline: List known addresses. Useful for debugging.
+  short: \'ipfs swarm addrs' lists all addresses this node is aware of.
+  long: null

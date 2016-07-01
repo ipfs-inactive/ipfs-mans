@@ -1,0 +1,29 @@
+name: init
+command: ipfs init
+options:
+  - name: empty-repo
+    alias: e
+    type: bool
+    description: Don't add and pin help files to the local storage.
+  - name: bits
+    alias: b
+    type: int
+    default: 2048
+    description: Number of bits to use in the generated RSA private key.
+arguments:
+  - name: default-config
+    type: file
+    required: false
+    stdin: true
+    description: Initialize with the given configuration.
+help:
+  tagline: Initializes IPFS config file.
+  short: |
+    Initializes IPFS configuration files and generates a new keypair.
+    
+    ipfs uses a repository in the local file system. By default, the repo is
+    located at ~/.ipfs. To change the repo location, set the $IPFS_PATH
+    environment variable:
+    
+        export IPFS_PATH=/path/to/ipfsrepo
+  long: null

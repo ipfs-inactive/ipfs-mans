@@ -1,0 +1,6 @@
+name: repo
+command: ipfs repo
+help:
+  tagline: Manipulate the IPFS repo.
+  short: \'ipfs repo' is a plumbing command used to manipulate the repo.
+  long: null

@@ -1,0 +1,21 @@
+name: set-data
+command: ipfs object patch set-data
+arguments:
+  - name: data
+    type: file
+    required: true
+    stdin: true
+    description: The data to set the object to.
+  - name: root
+    type: string
+    required: true
+    description: The hash of the node to modify.
+help:
+  tagline: Set the data field of an ipfs object.
+  short: |
+    Set the data of an ipfs object from stdin or with the contents of a file.
+    
+    Example:
+    
+        $ echo "my data" | ipfs object patch $MYHASH set-data
+  long: null

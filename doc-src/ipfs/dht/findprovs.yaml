@@ -1,0 +1,17 @@
+name: findprovs
+command: ipfs dht findprovs
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+arguments:
+  - name: key
+    type: string
+    required: true
+    variadic: true
+    description: The key to find providers for.
+help:
+  tagline: Find peers in the DHT that can provide a specific value, given a key.
+  short: Outputs a list of newline-delimited provider Peer IDs.
+  long: null

@@ -1,0 +1,11 @@
+name: peers
+command: ipfs swarm peers
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Also display latency along with peer information in the following form: <peer address> <latency>
+help:
+  tagline: List peers with open connections.
+  short: \'ipfs swarm peers' lists the set of peers this node is connected to.
+  long: null

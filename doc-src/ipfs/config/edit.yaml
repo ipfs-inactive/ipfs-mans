@@ -1,0 +1,8 @@
+name: edit
+command: ipfs config edit
+help:
+  tagline: Opens the config file for editing in $EDITOR.
+  short: |
+    To use 'ipfs config edit', you must have the $EDITOR environment
+    variable set to your preferred text editor.
+  long: null

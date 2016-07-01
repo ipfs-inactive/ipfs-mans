@@ -1,0 +1,34 @@
+name: add-link
+command: ipfs object patch add-link
+options:
+  - name: create
+    alias: p
+    type: bool
+    description: Create intermediary nodes.
+arguments:
+  - name: ref
+    type: string
+    required: true
+    description: IPFS object to add link to.
+  - name: name
+    type: string
+    required: true
+    description: Name of link to create.
+  - name: root
+    type: string
+    required: true
+    description: The hash of the node to modify.
+help:
+  tagline: Add a link to a given object.
+  short: |
+    Add a Merkle-link to the given object and return the hash of the result.
+    
+    Example:
+    
+        $ EMPTY_DIR=$(ipfs object new unixfs-dir)
+        $ BAR=$(echo "bar" | ipfs add -q)
+        $ ipfs object patch $EMPTY_DIR add-link foo $BAR
+    
+    This takes an empty directory, and adds a link named 'foo' under it, pointing
+    to a file containing 'bar', and returns the hash of the new object.
+  long: null

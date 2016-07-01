@@ -1,0 +1,24 @@
+name: mkdir
+command: ipfs files mkdir
+options:
+  - name: parents
+    alias: p
+    type: bool
+    description: No error if existing, make parent directories as needed.
+arguments:
+  - name: path
+    type: string
+    required: true
+    description: Path to dir to make.
+help:
+  tagline: Make directories.
+  short: |
+    Create the directory if it does not already exist.
+    
+    NOTE: All paths must be absolute.
+    
+    Examples:
+    
+        $ ipfs mfs mkdir /test/newdir
+        $ ipfs mfs mkdir -p /test/does/not/exist/yet
+  long: null

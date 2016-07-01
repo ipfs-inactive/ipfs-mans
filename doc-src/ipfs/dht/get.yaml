@@ -1,0 +1,24 @@
+name: get
+command: ipfs dht get
+options:
+  - name: verbose
+    alias: v
+    type: bool
+    description: Print extra information.
+arguments:
+  - name: key
+    type: string
+    required: true
+    variadic: true
+    description: The key to find a value for.
+help:
+  tagline: Given a key, query the DHT for its best value.
+  short: |
+    Outputs the best value for the given key.
+    
+    There may be several different values for a given key stored in the DHT; in
+    this context 'best' means the record that is most desirable. There is no one
+    metric for 'best': it depends entirely on the key type. For IPNS, 'best' is
+    the record that is both valid and has the highest sequence number (freshest).
+    Different key types can specify other 'best' rules.
+  long: null
